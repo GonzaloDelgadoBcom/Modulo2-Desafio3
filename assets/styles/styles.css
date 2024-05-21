@@ -53,6 +53,7 @@ button {
     background-color: rgb(27, 8, 199);
     color: #fff;
     font-size: larger;
+    transition: all 0.5s;
 }
 
 main {
@@ -63,10 +64,20 @@ main {
 }
 
 button:hover {
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(163, 49, 70);
+    cursor: pointer;
+}
+
+button:active {
     height: 50px;
     border-radius: 20px;
     border: none;
     background-color: rgb(163, 49, 70);
+    transform: translateY(4px);
+    box-shadow: 0 5px #666;
 }
 
 .card {
@@ -79,6 +90,7 @@ button:hover {
     margin: 1rem;
     border-radius: 20px;
     height: 550px;
+    transition: all 0.5s;
 }
 
 .card img {
@@ -86,9 +98,17 @@ button:hover {
     height: 450px;
     object-fit: cover;
     vertical-align: top;  
-    border-radius: 10px;  
+    border-radius: 10px;
+      
 }
 
+.card:hover {
+    background-color: #000000;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+    color: #fff;
+}
 
 footer {
     background-color: #42403e;
@@ -114,7 +134,7 @@ footer {
     #root {
         display: grid;
         grid-template-areas:
-        "nav nav "
+        "nav nav"
         "filtro main"
         "footer footer"
         ;
@@ -144,8 +164,11 @@ footer {
  }
 
  .l-menu a:hover {
-    text-decoration: none;
-    color: #e51919;
+    background-color: #000000;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+    color: #fff;
  }
 
  .filtro {
@@ -171,6 +194,7 @@ main {
         grid-template-columns: 1fr 1fr;
     }
 }
+
 
 @media (min-width: 992px) {
     main {
